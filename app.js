@@ -55,11 +55,7 @@ document.body.appendChild(header);
 
 // Step 2
 let skillArr = ["SKill1", "Skill2", "skill3", "skill4"];
-
 let userChoice= prompt("Do you want the list ordered or unordered?");
-
-
-
 let list;
   
 if(userChoice == "ordered"){    
@@ -75,6 +71,14 @@ for(let i = 0; i < skillArr.length; i++){
     skills.appendChild(text);
     list.appendChild(skills);
 }
+
+// Step 3
+
+let removeSkill = prompt("Pick a random number 0-3");
+list.children[removeSkill].remove();
+
+
+
 
 
 
