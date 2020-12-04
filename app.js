@@ -43,70 +43,74 @@
 // };
 
 
-// Part 2
+//Part 2
 
-// Step 1
-let userName = prompt("Enter your username");
+// //Step 1
+// let userName = prompt("Enter your username");
 
-let header= document.createElement("h1");
-let title= document.createTextNode(userName + "'s resume!")
-header.appendChild(title);
-document.body.appendChild(header);
+// let header= document.createElement("h1");
+// let title= document.createTextNode(userName + "'s resume!")
+// header.appendChild(title);
+// document.body.appendChild(header);
 
-// Step 2
-let skillArr = ["SKill1", "Skill2", "skill3", "skill4"];
-let userChoice= prompt("Do you want the list ordered or unordered?");
-let list;
+// // Step 2
+// let skillArr = ["SKill1", "Skill2", "skill3", "skill4"];
+// let userChoice= prompt("Do you want the list ordered or unordered?");
+// let list;
   
-if(userChoice == "ordered"){    
-    list= document.createElement("ol");
-}else if(userChoice== "unordered"){
-    list= document.createElement("ul");
-}else (prompt("try again!"));
+// if(userChoice == "ordered"){    
+//     list= document.createElement("ol");
+// }else if(userChoice== "unordered"){
+//     list= document.createElement("ul");
+// }else (prompt("try again!"));
 
-for(let i = 0; i < skillArr.length; i++){
-    document.body.appendChild(list)
-    let skills = document.createElement('li')
-    let text = document.createTextNode(skillArr[i]);
-    skills.appendChild(text);
-    list.appendChild(skills);
-}
+// for(let i = 0; i < skillArr.length; i++){
+//     document.body.appendChild(list)
+//     let skills = document.createElement('li')
+//     let text = document.createTextNode(skillArr[i]);
+//     skills.appendChild(text);
+//     list.appendChild(skills);
+// }
+
+// // Step 3
+
+// let removeSkill = prompt("Pick a random number 0-3");
+// list.children[removeSkill].remove();
+
+//Part 3
+//Step 1
+
+//let button = document.querySelector('.button')
+//button.addEventListener('click', () => button.style.backgroundColor = 'cyan')
+
+
+    
+//Step 2
+// let button = document.querySelector('.button')
+// button.addEventListener('click', colorchange)
+
+// function colorchange() {
+//     let background = document.querySelector('.button').style.backgroundColor;
+//     if (background == "cyan") {
+//         document.querySelector('.button').style.backgroundColor = "salmon";
+//     } else {
+//         document.querySelector('.button').style.backgroundColor = "cyan";
+//     }
+// }
 
 // Step 3
+let button = document.querySelector('.button')
+let input = document.querySelector('.input')
+button.addEventListener('click', changecolor)
 
-let removeSkill = prompt("Pick a random number 0-3");
-list.children[removeSkill].remove();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function changecolor() {
+    console.log(input.value)
+    if (input.value == null || input.value == "") {
+        button.style.backgroundColor = "white";
+    } else {
+        button.style.backgroundColor = input.value;
+    }
+}
 
 
 
